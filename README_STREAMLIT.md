@@ -38,7 +38,7 @@ In Streamlit Cloud dashboard, add these secrets:
 
 | Variable | Value | Required |
 |----------|--------|----------|
-| `OPENAI_API_KEY` | Your OpenAI API key | ✅ |
+| `GROQ_API_KEY` | Your Groq API key | ✅ |
 | `DATABASE_URL` | `sqlite:///./finance_anomaly.db` | ❌ (optional) |
 
 ### Step 3: Deploy
@@ -93,7 +93,7 @@ Click **"Deploy!"** and wait for the build to complete.
 ## 🔧 Environment Variables
 
 ```bash
-OPENAI_API_KEY=your_openai_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
 DATABASE_URL=sqlite:///./finance_anomaly.db  # or PostgreSQL URL for production
 ```
 

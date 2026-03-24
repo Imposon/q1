@@ -8,6 +8,7 @@ sqlalchemy
 pydantic[email]
 email-validator
 openai
+groq
 python-dotenv
 matplotlib
 google-auth-oauthlib
