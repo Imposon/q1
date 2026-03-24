@@ -30,7 +30,7 @@ Intelligent anomaly detection for personal finance transactions powered by machi
 3. Connect your **GitHub account**
 4. Select repository: **`Imposon/q1`**
 5. Select branch: **`master`**
-6. Main file path: **`streamlit_app.py`**
+6. Main file path: **`streamlit_app_integrated.py`**
 
 ### Step 2: Configure Environment Variables
 
@@ -39,7 +39,6 @@ In Streamlit Cloud dashboard, add these secrets:
 | Variable | Value | Required |
 |----------|--------|----------|
 | `GROQ_API_KEY` | Your Groq API key | ✅ |
-| `DATABASE_URL` | `sqlite:///./finance_anomaly.db` | ❌ (optional) |
 
 ### Step 3: Deploy
 
@@ -49,7 +48,7 @@ Click **"Deploy!"** and wait for the build to complete.
 
 ### Prerequisites
 - Python 3.11+
-- OpenAI API key
+- Groq API key
 
 ### Setup
 
@@ -70,17 +69,12 @@ Click **"Deploy!"** and wait for the build to complete.
    pip install -r requirements.txt
    ```
 
-4. **Start backend**
+4. **Start the integrated app**
    ```bash
-   uvicorn app.main:app --reload --port 8000
+   streamlit run streamlit_app_integrated.py --server.port 8502
    ```
 
-5. **Start frontend**
-   ```bash
-   streamlit run streamlit_app.py --server.port 8502
-   ```
-
-6. **Open** http://localhost:8502
+5. **Open** http://localhost:8502
 
 ## 📊 Usage
 
@@ -94,24 +88,18 @@ Click **"Deploy!"** and wait for the build to complete.
 
 ```bash
 GROQ_API_KEY=your_groq_api_key_here
-DATABASE_URL=sqlite:///./finance_anomaly.db  # or PostgreSQL URL for production
 ```
 
 ## 📁 Project Structure
 
 ```
 q1/
-├── app/
-│   ├── main.py              # FastAPI backend
-│   ├── models.py           # Database models
-│   ├── schemas.py          # Pydantic schemas
-│   ├── routes/             # API endpoints
-│   └── database.py        # Database configuration
-├── streamlit_app.py        # Streamlit frontend
-├── requirements.txt        # Python dependencies
-├── packages.txt           # System dependencies
+├── streamlit_app_integrated.py   # Integrated Streamlit app (no backend needed)
+├── streamlit_app.py           # Original version with separate backend
+├── requirements.txt             # Python dependencies
+├── packages.txt              # System dependencies
 └── .streamlit/
-    └── config.toml        # Streamlit configuration
+    └── config.toml             # Streamlit configuration
 ```
 
 ## 🌐 Deployment URLs

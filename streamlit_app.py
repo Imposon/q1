@@ -23,7 +23,11 @@ from dotenv import load_dotenv
 # Load environment variables
 load_dotenv()
 
-API_BASE = "http://127.0.0.1:8000"
+# Use different API URLs for local vs cloud deployment
+if os.getenv("STREAMLIT_CLOUD"):
+    API_BASE = "https://vortex-finance-backend.onrender.com"  # Your deployed backend URL
+else:
+    API_BASE = "http://127.0.0.1:8000"
 
 # Get total users count
 @st.cache_data(ttl=60)  # Cache for 60 seconds
