@@ -123,7 +123,3 @@ This project is licensed under the MIT License.
 For issues and questions:
 - Open an issue on GitHub
 - Check the troubleshooting guide
-
----
-
-**Built with ❤️ using Streamlit and FastAPI**
