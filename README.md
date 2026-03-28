@@ -78,6 +78,6 @@ app/
 
 ## Database
 
-SQLite file: `finance_anomaly.db` (auto-created on first run).
+SQLite file: `finance_anomaly.db`.
 
 Three tables: `users`, `transactions`, `user_baselines`.
