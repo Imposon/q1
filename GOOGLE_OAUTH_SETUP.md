@@ -104,7 +104,7 @@ Enable debug logging by setting:
 export STREAMLIT_LOG_LEVEL=debug
 ```
 
-**Environment Variables Check:**
+**Environment Variables:**
 
 Verify your `.env` file has the correct redirect URI for your environment:
 - Local development: `GOOGLE_REDIRECT_URI=http://localhost:8502`
